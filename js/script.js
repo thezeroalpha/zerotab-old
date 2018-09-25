@@ -436,7 +436,12 @@ function handleQuery(event, query) {
                     searchInput.value = "";
                 }
             } else {
-                window.location = searchSources[ssi][1].replace("{Q}", encodeURIComponent(query));
+                if (ssi === "3") {
+                    window.location = searchSources[ssi][1].replace("{Q}", encodeURI(query));
+                }
+                else {
+                    window.location = searchSources[ssi][1].replace("{Q}", encodeURIComponent(query));
+                }
             }
         }
     }
