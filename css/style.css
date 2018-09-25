@@ -175,6 +175,14 @@ button::-moz-focus-inner {
     fill: #ffd200
 }
 
+.button.accent-palegoldenrod label {
+    color: #EEE8AA;
+    border-color: #EEE8AA
+}
+
+.button.accent-palegoldenrod svg {
+    fill: #EEE8AA
+}
 .button > .button-content {
     display: block;
     position: absolute;
