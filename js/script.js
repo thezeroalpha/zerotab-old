@@ -436,7 +436,7 @@ function handleQuery(event, query) {
                     searchInput.value = "";
                 }
             } else {
-                if (ssi === "3") {
+                if (ssi == "3") {
                     window.location = searchSources[ssi][1].replace("{Q}", encodeURI(query));
                 }
                 else {
