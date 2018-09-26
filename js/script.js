@@ -254,7 +254,7 @@ var linkMenu = [
     ["HowtoForge", "https://www.howtoforge.com", ""],
     ["Cata-List", "https://cata-list.github.io", ""],
     [svgCloud, "yellow", "-HEAD-"],
-    ["Imgur", "https://imgur.com", ""],
+    ["Boring Host", "https://boring.host", ""],
     ["PostImages", "https://postimages.org", ""],
     ["Imgbox", "https://imgbox.com", ""],
     ["ImgBB", "https://imgbb.com", ""],
