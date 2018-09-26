@@ -11,6 +11,7 @@ var searchSources = [
     ["d", "https://duckduckgo.com/?q={Q}", "DuckDuckGo"],
     ["r", "https://reddit.com/r/{Q}", "Subreddit"],
     ["u", "https://{Q}", "Direct URL"],
+    ["yt", "https://www.youtube.com/results?search_query={Q}", "YouTube"],
     ["t", "https:///1337x.to/search/{Q}/1/", "Torrents"],
     ["a", "https://www.google.com/search?q=intext:%22{Q}%22+(avi|mkv|mov|mp4|mpg|wmv|ac3|flac|m4a|mp3|ogg|wav|wma)+-inurl:(jsp|pl|php|html|aspx|htm|cf|shtml)+-inurl:(index_of|listen77|mp3raid|mp3toss|mp3drug|index_of|wallywashis)+intitle:%22index.of./%22", "Audio/Video"],
     ["s", "https://www.google.com/search?q=intext:%22{Q}%22+(apk|exe|dmg|iso|tar|7z|bz2|gz|iso|rar|zip)+-inurl:(jsp|pl|php|html|aspx|htm|cf|shtml)+-inurl:(index_of|listen77|mp3raid|mp3toss|mp3drug|index_of|wallywashis)+intitle:%22index.of./%22", "Software/Archive"]
