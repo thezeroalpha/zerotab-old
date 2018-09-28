@@ -55,19 +55,8 @@ function loadConfig() {
 }
 
 function initSearchBar() {
-    if (searchSources[ssi] !== undefined) {
-        var searchsave = GetCookie("engine") || "";
-        if (searchsave !== "") {
-            searchInput.placeholder = searchSources[searchsave][2];
-            ssi = searchsave;
-        } else
-            searchInput.placeholder = searchSources[ssi][2];
-    } else {
-        ssi = 0;
-        searchInput.placeholder = "Do you know what you're doing?";
-        alert("Error: default search engine setting is invalid!");
-    }
-
+    ssi = 0;
+    searchInput.placeholder = searchSources[ssi][2];
     document.addEventListener('keydown', switcheroo);
     searchInput.value = "";
 }
@@ -209,8 +198,6 @@ function handleQuery(event, query) {
                         ssi = i;
                         searchInput.placeholder = searchSources[ssi][2];
                         searchInput.value = query.replace(keyword, "").trim();
-                        searchsave = ssi;
-                        SetCookie("engine", searchsave, 365 * 24 * 60 * 60 * 1000);
                         event.preventDefault();
                         break;
                     }
