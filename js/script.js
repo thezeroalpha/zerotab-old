@@ -84,12 +84,14 @@ function loadConfig() {
             } else {
                 SetCookie("config_length", config["length"], oneYearMS)
 
-                $.each(config.content, function(category, props) {
-                    menu.push(["svg" + category, props.accent, "-HEAD-"])
-                    $.each(props.links, function(name, url) {
-                        menu.push([name, url, ""]);
-                    })
-                })
+                for (var i in config.content) {
+                    menu.push(["svg" + i, config.content[i].accent, "-HEAD-"])
+
+                    for (var link in config.content[i].links) {
+                        var links = config.content[i].links
+                        menu.push([links[link].name, links[link].url, ""])
+                    }
+                }
                 localStorage.setItem("menu", JSON.stringify(menu))
 
             }
