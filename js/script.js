@@ -101,7 +101,7 @@ function loadConfig() {
 
 function initSearchBar() {
     ssi = 0;
-    searchInput.placeholder = searchSources[ssi][2];
+    searchInput.attr("placeholder", searchSources[ssi][2]);
     document.addEventListener('keydown', switcheroo);
     searchInput.value = "";
 }
@@ -233,8 +233,8 @@ function handleQuery(event, query) {
                     keyword = cmdPrefix + searchSources[i][0];
                     if (keyword === qList[0]) {
                         ssi = i;
-                        searchInput.placeholder = searchSources[ssi][2];
-                        searchInput.value = query.replace(keyword, "").trim();
+                        searchInput.attr("placeholder", searchSources[ssi][2]);
+                        searchInput.val(query.replace(keyword, "").trim());
                         event.preventDefault();
                         break;
                     }
@@ -255,7 +255,7 @@ function handleQuery(event, query) {
                 if (qList.length > 1) {
                     window.location = searchSources[ssi][1].replace("{Q}", encodeURIComponent(query.replace(keyword, ""))).trim();
                 } else {
-                    searchInput.placeholder = searchSources[ssi][2];
+                    searchInput.attr("placeholder", searchSources[ssi][2]);
                     searchInput.value = "";
                 }
             } else {
