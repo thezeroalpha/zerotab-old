@@ -89,7 +89,7 @@ function loadConfig() {
 
                     for (var link in config.content[i].links) {
                         var links = config.content[i].links
-                        menu.push([links[link].name, links[link].url, ""])
+                        menu.push([link, links[link], ""])
                     }
                 }
                 localStorage.setItem("menu", JSON.stringify(menu))
