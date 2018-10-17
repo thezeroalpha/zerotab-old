@@ -1,5 +1,5 @@
 {
-  "length": 281,
+  "length": 252,
   "content": {
     "School": {
       "accent": "palegoldenrod",
@@ -15,14 +15,19 @@
       "accent": "blue",
       "links": {
         "1337X": "https://1337x.to/home/",
+        "RUTracker": "http://rutracker.org",
+        "Library Genesis": "http://gen.lib.rus.ec",
+        "AppK'd": "http://macbed.com",
+        "YIFY": "https://yts.ag",
         "RARBG": "https://rarbg.to/torrents.php",
         "BTDB": "https://btdb.to",
-        "KickAss": "https://katcr.co/new/full/",
         "Zooqle": "https://zooqle.com",
+        "ETTV": "https://ettv.tv",
         "EZTV": "https://eztv.ag",
         "GloDLS": "https://glodls.to",
-        "YIFY Movies": "https://yts.am/browse-movies",
-        "The Pirate Bay": "https://thepiratebay.rocks",
+        "MKVCage": "https://www.mkvcage.ws",
+        "TorrentDownloads": "http://torrentdownloads.me",
+        "IsoHunt": "http://isohunt.to",
         "LimeTorrents": "https://www.limetorrents.info/home/",
         "WorldWide": "https://worldwidetorrents.me/home.php",
         "Mobilism": "https://forum.mobilism.org",
@@ -32,7 +37,6 @@
         "DownTURK": "https://www.downturk.net",
         "MagazineLib": "https://magazinelib.com",
         "Sci-Hub": "https://sci-hub.tw",
-        "LibGen": "http://libgen.io",
         "B-OK": "https://b-ok.xyz",
         "AudioBookBay": "http://audiobookbay.nl",
         "FitGirl Repacks": "http://fitgirl-repacks.site",
@@ -45,8 +49,6 @@
         "DDLValley": "https://ddlvalley.me",
         "TwoDDL": "http://2ddl.ws",
         "Snahp.it": "https://snahp.it",
-        "MKVCage": "https://www.mkvcage.ws",
-        "YouTubeMP3": "https://youtubemp3.rip",
         "DatMusic": "https://datmusic.xyz",
         "Plank28": "https://www.zippyshare.com/plank28"
       }
@@ -54,7 +56,6 @@
     "Stream": {
       "accent": "purple",
       "links": {
-        "YouTube": "https://www.youtube.com",
         "IOMovies": "https://www.iomovies.to",
         "Twitch": "https://www.twitch.tv",
         "Spotify": "https://open.spotify.com",
@@ -62,8 +63,6 @@
         "Send It": "https://sendit.gg",
         "StreamCR": "https://scr.cr",
         "Ololo": "https://ololo.to",
-        "9Anime": "https://9anime.is",
-        "WatchCartoon": "https://www.watchcartoononline.com",
         "WatchSeries": "https://swatchseries.to",
         "Watch Series 2": "https://watch-series.ru",
         "Cine.to": "https://cine.to",
@@ -75,16 +74,6 @@
         "OnMovies": "https://onmovies.se",
         "AZMovies": "https://azmovies.xyz",
         "DagWood": "https://dagwood.co",
-        "Ripple.is": "http://ripple.is",
-        "BilaSport": "http://bilasport.net",
-        "SpeedSports": "http://www.speedsports.me",
-        "720pStream": "https://www.720pstream.me",
-        "NFL Streams": "https://www.reddit.com/r/nflstreams/",
-        "NBA Streams": "https://www.reddit.com/r/nbastreams/",
-        "MLB Streams": "https://www.reddit.com/r/MLBStreams/",
-        "NHL Streams": "https://www.reddit.com/r/NHLStreams/",
-        "Soccer Streams": "https://www.reddit.com/r/soccerstreams/",
-        "UstreaMix": "https://ssl.ustreamix.com",
         "Unblocked": "https://unblocked.lol"
       }
     },
@@ -208,48 +197,27 @@
         "VFXDownload": "https://vfxdownload.com",
         "ShareAE": "https://www.shareae.com",
         "UltraVFX": "http://www.ultravfx.com",
-        "Selfhosted": "https://github.com/Kickball/awesome-selfhosted"
+        "Selfhosted": "https://github.com/Kickball/awesome-selfhosted",
+        "Brand Colors": "brandcolors.net",
+        "DaFont": "http://dafont.com",
+        "DougScripts": "dougscripts.com",
+        "WhatTheFont": "https://www.myfonts.com/WhatTheFont/",
+        "Test a font": "http://fontfling.com",
+        "DevHints": "https://devhints.io"
       }
     },
 
-    "News": {
+    "Music": {
       "accent": "orange",
       "links": {
-        "Reuters": "http://www.reuters.com",
-        "The Guardian": "https://www.theguardian.com",
-        "Google News": "https://news.google.com",
-        "Drudge Report": "http://drudgereport.com",
-        "Zero Hedge": "http://www.zerohedge.com",
-        "Ars Technica": "https://arstechnica.com",
-        "Hacker News": "https://news.ycombinator.com",
-        "Krebs Security": "https://krebsonsecurity.com",
-        "DeepDotWeb": "https://www.deepdotweb.com",
-        "TorrentFreak": "https://torrentfreak.com",
-        "WirelesSHack": "http://www.wirelesshack.org",
-        "EmuCR": "https://www.emucr.com",
-        "Techmeme": "https://techmeme.com",
-        "Slashdot": "https://slashdot.org",
-        "Lobsters": "https://lobste.rs",
-        "WccfTech": "https://wccftech.com",
-        "Guru3D": "https://www.guru3d.com",
-        "AnandTech": "http://www.anandtech.com",
-        "TweakTown": "https://www.tweaktown.com",
-        "XDA-Developers": "https://www.xda-developers.com",
-        "The Register": "https://www.theregister.co.uk",
-        "The Inquirer": "https://www.theinquirer.net",
-        "Phoronix": "https://phoronix.com",
-        "Threatpost": "https://threatpost.com",
-        "Naked Security": "https://nakedsecurity.sophos.com",
-        "WeLiveSecurity": "https://www.welivesecurity.com",
-        "TheHackerNews": "https://thehackernews.com",
-        "Speckyboy": "https://speckyboy.com",
-        "Design Shack": "https://designshack.net",
-        "Tech Guy Labs": "https://techguylabs.com",
-        "TWiT Netcasts": "https://twit.tv",
-        "SmashingSec": "https://www.smashingsecurity.com",
-        "CoinTelegraph": "https://cointelegraph.com",
-        "HowtoForge": "https://www.howtoforge.com",
-        "Cata-List": "https://cata-list.github.io"
+        "Genre Cloud": "http://everynoise.com/engenremap.html",
+        "Song BPM": "https://songbpm.com",
+        "Riffstation Chords": "https://play.riffstation.com",
+        "Acapella Downloads": "https://www.acapellas4u.co.uk",
+        "VSTorrent": "https://vstorrent.net",
+        "VSTbase": "https://vstbase.org",
+        "Audioz": "https://audioz.download",
+        "WhoSampled": "http://whosampled.com"
       }
     },
 
@@ -297,9 +265,6 @@
     "More": {
       "accent": "pink",
       "links": {
-        "Amazon": "https://www.amazon.com",
-        "PayPal": "https://www.paypal.com",
-        "Gmail": "https://www.google.com/gmail/",
         "ProtonMail": "https://protonmail.com",
         "10 Minute Mail": "https://10minutemail.net",
         "PrivateBin": "https://privatebin.net",
@@ -310,6 +275,12 @@
         "AlternativeTo": "https://alternativeto.net",
         "OlderGeeks": "https://oldergeeks.com",
         "DistroWatch": "https://DistroWatch.com",
+        "Find a login": "bugmenot.com",
+        "Unfurlr": "unfurlr.com",
+        "WeTransfer": "wetransfer.com",
+        "PlusTransfer": "plustransfer.com",
+        "Extract EXIF": "http://exif.regex.info/exif.cgi",
+        "WiFi Passwords Map": "https://www.google.com/maps/d/u/0/viewer?mid=1Z1dI8hoBZSJNWFx2xr_MMxSxSxY&hl=en_US&ll=52.31053860000001%2C4.768274399999996&z=8",
         "Wallhalla": "https://wallhalla.com",
         "Draw": "https://www.draw.io",
         "Anon.to": "https://anon.to",
@@ -329,6 +300,7 @@
         "DNStats": "https://dnstats.net",
         "OSINT": "https://github.com/jivoi/awesome-osint/blob/master/README.md",
         "Lists": "https://github.com/sindresorhus/awesome",
+        "Cata-list": "https://cata-list.github.io/#/",
         "Hacking": "https://github.com/Hack-with-Github/Awesome-Hacking/blob/master/README.md",
         "Sysadmin": "https://github.com/n1trux/awesome-sysadmin",
         "PreDB": "https://predb.me"
