@@ -15,6 +15,18 @@ body {
     transition: opacity .8s ease;
     overflow: hidden;
 }
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: inherit;
+}
+::-webkit-scrollbar-track-piece {
+    background: inherit;
+}
+::-webkit-scrollbar-thumb {
+    background: #333;
+}
 
 img {
     max-height: 55px
