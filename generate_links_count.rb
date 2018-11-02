@@ -15,3 +15,4 @@ puts "Links found: #{total}"
 File.open("js/config.json", "w") do |f|
     f.puts "#{hash.to_json}"
 end
+puts "File updated."
