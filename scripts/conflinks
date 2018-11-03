@@ -1,0 +1,61 @@
+#!/usr/bin/env ruby
+require 'json'
+
+class Config
+    def initialize file
+        @path = file
+        @content = JSON.parse(File.read(@path))
+    end
+    def update
+        total = @content["content"].inject(0) do |sum,(category,_)|
+            sum+= @content["content"][category]["links"].inject(0) { |innersum,_| innersum += 1; innersum; }
+            sum
+        end
+
+        @content["length"] = total
+
+        File.open(@path, "w") do |f|
+            f.puts "#{@content.to_json}"
+        end
+
+        total
+    end
+    def generate
+        File.open("links", "w") do |f|
+            @content["content"].each do |category, _|
+                @content["content"][category]["links"].each do |_, url|
+                    f.puts(url) unless url == "-"
+                end
+            end
+        end
+        puts "File 'links' created in current working directory."
+    end
+    def check
+        self.generate
+        puts "Running bash script to check links..."
+        system("bash test_links.sh links link_status.csv")
+        puts "Result saved in file 'link_status.csv'"
+    end
+    def print_usage
+        puts "Usage:"
+        puts "conflinks update      update the config file link count"
+        puts "conflinks generate    generate links file containing URLs"
+        puts "conflinks check       check validity of links"
+    end
+end
+
+
+config = Config.new("js/config.json")
+
+if ARGV.length == 0
+    config.print_usage
+elsif ARGV[0] == "update"
+    puts "Links updated: #{config.update}"
+elsif ARGV[0] == "check"
+    config.check
+elsif ARGV[0] == "generate"
+    config.generate
+else
+    config.print_usage
+end
+
