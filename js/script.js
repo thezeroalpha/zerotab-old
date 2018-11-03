@@ -144,7 +144,7 @@ function buildMenu() {
         if (linkMenu[i][2] === "-HEAD-") {
             newMenu += "</ul></div></div></li><li class=\"button-container expanding-down\"><div class=\"button accent-" + (linkMenu[i][1] !== "" ? linkMenu[i][1].toLowerCase() : "white") + "\"><label class=\"button-content\">" + window[linkMenu[i][0]] + "</label><div class=\"button-expanded-content\"><ul class=\"menu-link container\">";
         }
-        else if (linkMenu[i][0] == "-" && linkMenu[i][1] == "-") {
+        else if (linkMenu[i][1] == "-") {
             newMenu += "<li class='menu-link-item'><hr/></li>";
         }
         else {
