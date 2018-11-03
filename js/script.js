@@ -34,14 +34,14 @@ var svgTools = "<svg style=\"width:24px;height:24px\" xmlns=\"http://www.w3.org/
 var noteText = null;
 var ignoredKeys = [9, 13, 16, 17, 18, 19, 20, 27, 33, 34, 35, 36, 37, 38, 39, 40, 45, 46, 91, 92, 93, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 144, 145];
 
-var searchInput, rootSearchHelp, rootMenuUL, dateDiv, notesTextarea;
+var $searchInput, $rootSearchHelp, $rootMenuUL, $dateDiv, $notesTextarea;
 
 $(document).ready(function() {
-    searchInput = $('#searchBar');
-    rootSearchHelp = $('#searchHelpMenu');
-    rootMenuUL = $('#categoryMenu');
-    dateDiv = $('#dateContainer');
-    notesTextarea = $('#notesInput');
+    $searchInput = $('#searchBar');
+    $rootSearchHelp = $('#searchHelpMenu');
+    $rootMenuUL = $('#categoryMenu');
+    $dateDiv = $('#dateContainer');
+    $notesTextarea = $('#notesInput');
 
     init();
 
@@ -103,9 +103,9 @@ function loadConfig() {
 
 function initSearchBar() {
     ssi = 0;
-    searchInput.attr("placeholder", searchSources[ssi][2]);
+    $searchInput.attr("placeholder", searchSources[ssi][2]);
     document.addEventListener('keydown', switcheroo);
-    searchInput.value = "";
+    $searchInput.value = "";
 }
 
 function buildDate() {
@@ -114,7 +114,7 @@ function buildDate() {
     var o = 12 <= today.getHours() ? "PM" : "AM";
     (e = e < 10 ? "0" + e : e) < 1 && (e = 12);
     var s = e + ":" + (today.getMinutes() < 10 ? "0" + today.getMinutes() : today.getMinutes()) + ":" + (today.getSeconds() < 10 ? "0" + today.getSeconds() : today.getSeconds()) + " " + o;
-    dateDiv.html('<font class="font-2em">' + dayNames[today.getDay()] + "<br>" + monthNames[today.getMonth()] + " " + today.getDate() + ", " + today.getFullYear() + "<br>" + s + "</font>", setTimeout(buildDate, 1e3))
+    $dateDiv.html('<font class="font-2em">' + dayNames[today.getDay()] + "<br>" + monthNames[today.getMonth()] + " " + today.getDate() + ", " + today.getFullYear() + "<br>" + s + "</font>", setTimeout(buildDate, 1e3))
 }
 
 function buildHelp() {
@@ -127,7 +127,7 @@ function buildHelp() {
         newHelp += "<li><span>!" + searchSources[i][0] + "</span> " + searchSources[i][2] + "</li>";
     }
 
-    rootSearchHelp.html(newHelp);
+    $rootSearchHelp.html(newHelp);
 }
 
 function buildMenu() {
@@ -152,13 +152,13 @@ function buildMenu() {
         }
     }
     newMenu += "</ul></div></div></li>";
-    rootMenuUL.html(newMenu);
+    $rootMenuUL.html(newMenu);
 }
 
 function handleKeydown(event) {
-    if (notesInput === document.activeElement || searchInput === document.activeElement || ignoredKeys.includes(event.keyCode))
+    if (notesInput === document.activeElement || $searchInput === document.activeElement || ignoredKeys.includes(event.keyCode))
         return;
-    searchInput.focus();
+    $searchInput.focus();
 }
 
 function GetCookie(name) {
@@ -241,8 +241,8 @@ function handleQuery(event, query) {
                     keyword = cmdPrefix + searchSources[i][0];
                     if (keyword === qList[0]) {
                         ssi = i;
-                        searchInput.attr("placeholder", searchSources[ssi][2]);
-                        searchInput.val(query.replace(keyword, "").trim());
+                        $searchInput.attr("placeholder", searchSources[ssi][2]);
+                        $searchInput.val(query.replace(keyword, "").trim());
                         event.preventDefault();
                         break;
                     }
@@ -263,8 +263,8 @@ function handleQuery(event, query) {
                 if (qList.length > 1) {
                     window.location = searchSources[ssi][1].replace("{Q}", encodeURIComponent(query.replace(keyword, ""))).trim();
                 } else {
-                    searchInput.attr("placeholder", searchSources[ssi][2]);
-                    searchInput.value = "";
+                    $searchInput.attr("placeholder", searchSources[ssi][2]);
+                    $searchInput.value = "";
                 }
             } else {
                 if (ssi == "3") {
@@ -276,13 +276,13 @@ function handleQuery(event, query) {
         }
     }
     if (key === 27) {
-        searchInput.blur();
+        $searchInput.blur();
     }
 }
 
 function handleNoteInput(event) {
     var key = event.keyCode || event.which;
-    if (key === 27) notesTextarea.blur();
+    if (key === 27) $notesTextarea.blur();
 }
 
 function handleNotes(event, focus) {
@@ -290,12 +290,12 @@ function handleNotes(event, focus) {
         if (!noteText) {
             noteText = GetCookie("notes") || "";
         }
-        notesTextarea.value = noteText;
+        $notesTextarea.val(noteText);
         $('#notesContainer').addClass("active");
     } else {
         $('#notesContainer').removeClass("active");
-        if (noteText !== notesTextarea.value) {
-            noteText = notesTextarea.value;
+        if (noteText !== $notesTextarea.val()) {
+            noteText = $notesTextarea.val();
             SetCookie("notes", noteText, 365 * 24 * 60 * 60 * 1000);
         }
     }
