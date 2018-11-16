@@ -7,8 +7,13 @@ class Config
         @content = JSON.parse(File.read(@path))
     end
     def update
-        total = @content["content"].inject(0) do |sum,(category,_)|
-            sum+= @content["content"][category]["links"].inject(0) { |innersum,_| innersum += 1; innersum; }
+        total = @content["content"].inject(0) do |sum, category|
+            c = category.first[1]["links"]
+            innersum = c.inject(0) do |innersum, _|
+                innersum += 1
+                innersum
+            end
+            sum += innersum
             sum
         end
 

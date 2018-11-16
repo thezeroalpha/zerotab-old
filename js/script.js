@@ -85,10 +85,10 @@ function loadConfig() {
                 SetCookie("config_length", config["length"], oneYearMS)
 
                 for (var i in config.content) {
-                    menu.push(["svg" + i, config.content[i].accent, "-HEAD-"])
+                    menu.push(["svg" + Object.keys(config.content[i])[0], Object.values(config.content[i])[0].accent, "-HEAD-"])
 
-                    for (var link in config.content[i].links) {
-                        var links = config.content[i].links
+                    for (var link in Object.values(config.content[i])[0].links) {
+                        var links = Object.values(config.content[i])[0].links
                         menu.push([Object.keys(links[link])[0], Object.values(links[link])[0], ""])
                     }
                 }
